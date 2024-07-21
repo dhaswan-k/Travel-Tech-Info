@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signs and Signals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+        .items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .item {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 250px;
+        }
+        .item img {
+            width: 250px; /* Adjusted width for the images */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer; /* Add cursor pointer to indicate clickability */
+        }
+        .item p {
+            margin-top: 10px;
+            color: #666;
+        }
+        .item:hover img {
+            transform: scale(1.1); /* Increased scale on hover for visual feedback */
+        }
+    </style>
+</head>
+<body>
+    <h1>Traffic Signs and Signals</h1>
+
+    <div class="section">
+        <h2>Traffic Signs</h2>
+        <div class="items">
+            <div class="item">
+                <a href="{% static 'TravelTech/images/regs.png' %}" target="_blank">
+                    <img src="{% static 'TravelTech/images/regs.png' %}" alt="Regulatory Sign">
+                </a>
+                <p>Regulatory signs are used to inform drivers of traffic laws or regulations that must be obeyed.</p>
+            </div>
+            <div class="item">
+                <a href="{% static 'TravelTech/images/wars.png' %}" target="_blank">
+                    <img src="{% static 'TravelTech/images/wars.png' %}" alt="Warning Sign">
+                </a>
+                <p>Warning signs are used to alert drivers to conditions ahead that may require a reduction of speed or an action in the interest of safety and efficient traffic operations.</p>
+            </div>
+            <div class="item">
+                <a href="{% static 'TravelTech/images/infos.png' %}" target="_blank">
+                    <img src="{% static 'TravelTech/images/infos.png' %}" alt="Informational Sign">
+                </a>
+                <p>Informational signs provide information about directions, distances, services, or other points of interest.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Traffic Signals</h2>
+        <div class="items">
+            <div class="item">
+                <a href="{% static 'TravelTech/images/signals.png' %}" target="_blank">
+                    <img src="{% static 'TravelTech/images/signals.png' %}" alt="Traffic Signals">
+                </a>
+                <p>The traffic signal consists of three lights:</p>
+                <p><span>Red:</span> Indicates stop.</p>
+                <p><span>Yellow:</span> Warns that the signal is about to turn red. Prepare to stop.</p>
+                <p><span>Green:</span> Allows vehicles to proceed.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

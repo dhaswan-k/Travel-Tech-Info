@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration / Sign Up</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            background-image: url(bg.gif);
+            background-size: cover;
+        }
+
+        .container {
+            background-color: transparent;
+            padding: 20px 40px;
+            border-radius: 10px;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+            width: 400px;
+            height: 630px;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .container a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn {
+            cursor: pointer;
+            display: inline-block;
+            width: 100%;
+            background-color: #fff;
+            padding: 15px;
+            font-family: inherit;
+            font-size: 20px;
+            border: 0;
+            border-radius: 5px;
+            color: #000;
+            font-weight: 800;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0px 5px #00fffc, 0 0px 20px #00fffc;
+        }
+
+        .btn:focus {
+            outline: 0;
+            background-color: #00fffc;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .text {
+            margin-top: 30px;
+        }
+
+        .form-control {
+            position: relative;
+            margin: 20px 0 40px;
+            width: 300px;
+        }
+
+        .form-control input {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px #fff solid;
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+            font-size: 18px;
+            color: #00fffc;
+        }
+
+        .form-control input:focus,
+        .form-control input:valid {
+            outline: 0;
+            border-bottom-color: #00fffc;
+        }
+
+        .form-control label {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            color: #fff;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            white-space: nowrap; /* Ensures text does not wrap */
+            overflow: hidden; /* Prevents text overflow */
+        }
+
+        .form-control label span {
+            display: inline-block;
+            font-size: 18px;
+            min-width: 5px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .form-control input:focus+label span,
+        .form-control input:valid+label span {
+            color: #00fffc;
+            transform: translateY(-30px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SIGN UP</h1>
+        <form method="POST" onsubmit="return validateForm()">
+            {% csrf_token %}
+            <div class="form-control">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="form-control">
+                <input type="email" id="address" name="address" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-control">
+                <input type="tel" id="mobile" name="mobile" required>
+                <label for="mobile">Mobile No</label>
+            </div>
+            <div class="form-control">
+                <input type="password" id="pwd" name="pwd" required>
+                <label for="pwd">Password</label>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+            <p class="text">Already have an account?
+                <a href="{% url 'Login' %}" style="color: #00fffc;">Login Here</a>
+            </p>
+        </form>
+    </div>
+    <script>
+        // JavaScript for label animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const labels = document.querySelectorAll('.form-control label');
+
+            labels.forEach(label => {
+                label.innerHTML = label.innerText
+                    .split('')
+                    .map((letter, idx) =>
+                        `<span style="transition-delay:${idx * 30}ms">${letter}</span>`)
+                    .join('');
+            });
+        });
+
+        // Form validation function
+        function validateForm() {
+            const inputs = document.querySelectorAll('.form-control input');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.validity.valid) {
+                    isValid = false;
+                    input.classList.add('error');
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Numbers in India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.8;
+        }
+        .emergency-numbers {
+            margin-top: 30px;
+        }
+        .emergency-numbers table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .emergency-numbers th, .emergency-numbers td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .emergency-numbers th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .emergency-numbers td {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Emergency Numbers in India</h1>
+        </header>
+
+        <div class="emergency-numbers">
+            <h2>Important Emergency Contact Numbers</h2>
+            <table>
+                <tr>
+                    <th>Emergency Service</th>
+                    <th>Number</th>
+                </tr>
+                <tr>
+                    <td>Police</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Ambulance</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>Fire</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>Women Helpline</td>
+                    <td>1091</td>
+                </tr>
+                <tr>
+                    <td>Child Helpline</td>
+                    <td>1098</td>
+                </tr>
+                <tr>
+                    <td>Senior Citizen Helpline</td>
+                    <td>1090</td>
+                </tr>
+                <tr>
+                    <td>Disaster Management</td>
+                    <td>108</td>
+                </tr>
+            </table>
+        </div>
+
+        <img src="{% static 'TravelTech/images/emno.jpg' %}" alt="Emergency Numbers">
+        
+        <p>These emergency numbers are essential to remember and use in case of emergencies. Always keep them handy.</p>
+    </div>
+</body>
+</html>

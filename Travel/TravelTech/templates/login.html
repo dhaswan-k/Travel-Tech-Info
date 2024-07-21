@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #f0f0f0; */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='697' preserveAspectRatio='none' viewBox='0 0 1440 697'%3e%3cg clip-path='url(%26quot%3b%23SvgjsClipPath2161%26quot%3b)' fill='none'%3e%3crect width='1440' height='697' x='0' y='0' fill='%2332325d'%3e%3c/rect%3e%3ccircle r='54.93' cx='1340.89' cy='110.51' fill='url(%26quot%3b%23SvgjsLinearGradient2162%26quot%3b)'%3e%3c/circle%3e%3ccircle r='62.49' cx='354.73' cy='668.21' fill='%2343468b'%3e%3c/circle%3e%3ccircle r='38.28' cx='15.69' cy='648.06' fill='url(%26quot%3b%23SvgjsLinearGradient2163%26quot%3b)'%3e%3c/circle%3e%3ccircle r='25.815' cx='955.17' cy='493.34' fill='url(%26quot%3b%23SvgjsLinearGradient2164%26quot%3b)'%3e%3c/circle%3e%3ccircle r='22.675' cx='1325.24' cy='487.36' fill='url(%26quot%3b%23SvgjsLinearGradient2165%26quot%3b)'%3e%3c/circle%3e%3ccircle r='22.83' cx='1163.35' cy='548.55' fill='url(%26quot%3b%23SvgjsLinearGradient2166%26quot%3b)'%3e%3c/circle%3e%3ccircle r='65.235' cx='375.21' cy='162.72' fill='url(%26quot%3b%23SvgjsLinearGradient2167%26quot%3b)'%3e%3c/circle%3e%3ccircle r='34.76' cx='548.68' cy='635.39' fill='url(%26quot%3b%23SvgjsLinearGradient2168%26quot%3b)'%3e%3c/circle%3e%3c/g%3e%3cdefs%3e%3cclipPath id='SvgjsClipPath2161'%3e%3crect width='1440' height='697' x='0' y='0'%3e%3c/rect%3e%3c/clipPath%3e%3clinearGradient x1='1231.0300000000002' y1='110.51' x2='1450.7500000000002' y2='110.51' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2162'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%23484687' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='-60.870000000000005' y1='648.06' x2='92.25' y2='648.06' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2163'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%23464a8f' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='903.54' y1='493.34' x2='1006.8' y2='493.34' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2164'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%23484687' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1279.89' y1='487.36' x2='1370.5900000000001' y2='487.36' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2165'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%237e6286' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1117.6899999999998' y1='548.55' x2='1209.0099999999998' y2='548.55' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2166'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%23464a8f' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='244.73999999999998' y1='162.72' x2='505.67999999999995' y2='162.72' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2167'%3e%3cstop stop-color='%2332325d' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%23424488' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='479.15999999999997' y1='635.39' x2='618.1999999999999' y2='635.39' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2168'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='%234f4484' offset='0.9'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 100%; /* Full width by default */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LOG IN</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="nam">Name</label>
+            <input type="text" id="nam" placeholder="Enter Your Name" name="nam">
+
+            <label for="pwdd">Password</label>
+            <input type="password" id="pwdd" placeholder="Enter Your Password" name="pwdd">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
